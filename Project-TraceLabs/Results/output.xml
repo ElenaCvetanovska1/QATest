@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20211226 13:01:48.293" rpa="false" schemaversion="2">
+<suite id="s1" name="RegisteranewAccount" source="D:\Project-TraceLabs\Tests\Etherscan\RegisteranewAccount.robot">
+<test id="s1-t1" name="Check the required fields by not filling any data">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:01:48.825" endtime="20211226 13:01:48.825"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:01:48.840" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:01:48.825" endtime="20211226 13:01:53.963"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:01:53.963" endtime="20211226 13:01:54.109"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:01:54.117" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:01:54.109" endtime="20211226 13:01:54.346"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:01:54.346" endtime="20211226 13:01:54.666"/>
+</kw>
+<status status="PASS" starttime="20211226 13:01:48.825" endtime="20211226 13:01:54.666"/>
+</kw>
+<kw name="Click on *Create an account*" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:01:54.666" level="INFO">Clicking element 'id:ContentPlaceHolder1_btnRegister'.</msg>
+<status status="PASS" starttime="20211226 13:01:54.666" endtime="20211226 13:01:54.824"/>
+</kw>
+<status status="PASS" starttime="20211226 13:01:54.666" endtime="20211226 13:01:54.824"/>
+</kw>
+<kw name="Page Should Contain error messages on mandatory fields" library="Keywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Username is invalid.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:01:54.870" level="INFO">Current page contains text 'Username is invalid.'.</msg>
+<status status="PASS" starttime="20211226 13:01:54.824" endtime="20211226 13:01:54.870"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Please enter a valid email address.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:01:54.909" level="INFO">Current page contains text 'Please enter a valid email address.'.</msg>
+<status status="PASS" starttime="20211226 13:01:54.870" endtime="20211226 13:01:54.909"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your password must be at least 5 characters long.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:01:54.941" level="INFO">Current page contains text 'Your password must be at least 5 characters long.'.</msg>
+<status status="PASS" starttime="20211226 13:01:54.909" endtime="20211226 13:01:54.941"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Please accept our Terms and Conditions.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:01:54.973" level="INFO">Current page contains text 'Please accept our Terms and Conditions.'.</msg>
+<status status="PASS" starttime="20211226 13:01:54.941" endtime="20211226 13:01:54.973"/>
+</kw>
+<status status="PASS" starttime="20211226 13:01:54.824" endtime="20211226 13:01:54.973"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:01:54.973" endtime="20211226 13:01:57.346"/>
+</kw>
+<status status="PASS" starttime="20211226 13:01:54.973" endtime="20211226 13:01:57.346"/>
+</kw>
+<doc>This test case verifies the required fields</doc>
+<status status="PASS" starttime="20211226 13:01:48.825" endtime="20211226 13:01:57.346"/>
+</test>
+<test id="s1-t2" name="Check user should Register by filling all the required fields">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:01:57.346" endtime="20211226 13:01:57.346"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:01:57.346" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:01:57.346" endtime="20211226 13:02:02.600"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:02:02.600" endtime="20211226 13:02:02.746"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:02.746" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:02:02.746" endtime="20211226 13:02:02.994"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:02:02.994" endtime="20211226 13:02:03.313"/>
+</kw>
+<status status="PASS" starttime="20211226 13:01:57.346" endtime="20211226 13:02:03.313"/>
+</kw>
+<kw name="Valid values in the required fields" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtUserName</arg>
+<arg>george196</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:03.313" level="INFO">Typing text 'george196' into text field 'id:ContentPlaceHolder1_txtUserName'.</msg>
+<status status="PASS" starttime="20211226 13:02:03.313" endtime="20211226 13:02:03.626"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_txtEmail"]</arg>
+<arg>georgebit1@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:03.626" level="INFO">Typing text 'georgebit1@yopmail.com' into text field '//*[@id="ContentPlaceHolder1_txtEmail"]'.</msg>
+<status status="PASS" starttime="20211226 13:02:03.626" endtime="20211226 13:02:03.954"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:03.954" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword'.</msg>
+<status status="PASS" starttime="20211226 13:02:03.954" endtime="20211226 13:02:04.274"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword2</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:04.274" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword2'.</msg>
+<status status="PASS" starttime="20211226 13:02:04.274" endtime="20211226 13:02:04.560"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_maindiv"]/div[4]/div/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:04.568" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_maindiv"]/div[4]/div/label/span'.</msg>
+<status status="PASS" starttime="20211226 13:02:04.560" endtime="20211226 13:02:04.696"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211226 13:02:19.699" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20211226 13:02:04.696" endtime="20211226 13:02:19.699"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:03.313" endtime="20211226 13:02:19.699"/>
+</kw>
+<kw name="Click on *Create an account*" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:19.699" level="INFO">Clicking element 'id:ContentPlaceHolder1_btnRegister'.</msg>
+<status status="PASS" starttime="20211226 13:02:19.699" endtime="20211226 13:02:22.586"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:19.699" endtime="20211226 13:02:22.586"/>
+</kw>
+<kw name="Registration message" library="Keywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your account registration has been submitted and is pending email verification</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:02:22.618" level="INFO">Current page contains text 'Your account registration has been submitted and is pending email verification'.</msg>
+<status status="PASS" starttime="20211226 13:02:22.586" endtime="20211226 13:02:22.626"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:22.586" endtime="20211226 13:02:22.626"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:02:22.626" endtime="20211226 13:02:24.984"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:22.626" endtime="20211226 13:02:24.984"/>
+</kw>
+<doc>This test case verifies the required fields</doc>
+<status status="PASS" starttime="20211226 13:01:57.346" endtime="20211226 13:02:24.984"/>
+</test>
+<test id="s1-t3" name="Check all the optional fields when filling data">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:02:24.984" endtime="20211226 13:02:24.984"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:02:24.984" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:02:24.984" endtime="20211226 13:02:29.928"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:02:29.928" endtime="20211226 13:02:30.062"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:30.062" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:02:30.062" endtime="20211226 13:02:30.287"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:02:30.287" endtime="20211226 13:02:30.603"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:24.984" endtime="20211226 13:02:30.603"/>
+</kw>
+<kw name="Valid values in the required fields and check op. fields" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtUserName</arg>
+<arg>emadona13</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:30.603" level="INFO">Typing text 'emadona13' into text field 'id:ContentPlaceHolder1_txtUserName'.</msg>
+<status status="PASS" starttime="20211226 13:02:30.603" endtime="20211226 13:02:30.893"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_txtEmail"]</arg>
+<arg>emadonaa12@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:30.893" level="INFO">Typing text 'emadonaa12@yopmail.com' into text field '//*[@id="ContentPlaceHolder1_txtEmail"]'.</msg>
+<status status="PASS" starttime="20211226 13:02:30.893" endtime="20211226 13:02:31.210"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:31.210" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword'.</msg>
+<status status="PASS" starttime="20211226 13:02:31.210" endtime="20211226 13:02:31.492"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword2</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:31.492" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword2'.</msg>
+<status status="PASS" starttime="20211226 13:02:31.492" endtime="20211226 13:02:31.788"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_maindiv"]/div[4]/div/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:31.788" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_maindiv"]/div[4]/div/label/span'.</msg>
+<status status="PASS" starttime="20211226 13:02:31.788" endtime="20211226 13:02:31.925"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_maindiv"]/div[5]/div/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:31.925" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_maindiv"]/div[5]/div/label/span'.</msg>
+<status status="PASS" starttime="20211226 13:02:31.925" endtime="20211226 13:02:32.061"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211226 13:02:47.062" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20211226 13:02:32.061" endtime="20211226 13:02:47.062"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:30.603" endtime="20211226 13:02:47.062"/>
+</kw>
+<kw name="Click on *Create an account*" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:02:47.062" level="INFO">Clicking element 'id:ContentPlaceHolder1_btnRegister'.</msg>
+<status status="PASS" starttime="20211226 13:02:47.062" endtime="20211226 13:02:49.849"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:47.062" endtime="20211226 13:02:49.849"/>
+</kw>
+<kw name="Registration message" library="Keywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your account registration has been submitted and is pending email verification</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:02:49.889" level="INFO">Current page contains text 'Your account registration has been submitted and is pending email verification'.</msg>
+<status status="PASS" starttime="20211226 13:02:49.849" endtime="20211226 13:02:49.889"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:49.849" endtime="20211226 13:02:49.889"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:02:49.889" endtime="20211226 13:02:52.254"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:49.889" endtime="20211226 13:02:52.254"/>
+</kw>
+<doc>This test case verifies the optional fields</doc>
+<status status="PASS" starttime="20211226 13:02:24.984" endtime="20211226 13:02:52.254"/>
+</test>
+<test id="s1-t4" name="Testing for some invalid emails with cases like : without @,without dot, without alphabets before@ ,with @ symbol written in words">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:02:52.254" endtime="20211226 13:02:52.254"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:02:52.254" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:02:52.254" endtime="20211226 13:03:01.133"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:03:01.133" endtime="20211226 13:03:01.273"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:01.273" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:03:01.273" endtime="20211226 13:03:01.509"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:03:01.509" endtime="20211226 13:03:01.826"/>
+</kw>
+<status status="PASS" starttime="20211226 13:02:52.254" endtime="20211226 13:03:01.826"/>
+</kw>
+<kw name="Enter Invalid Emails" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_txtEmail"]</arg>
+<arg>testatgmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:01.826" level="INFO">Typing text 'testatgmail.com' into text field '//*[@id="ContentPlaceHolder1_txtEmail"]'.</msg>
+<status status="PASS" starttime="20211226 13:03:01.826" endtime="20211226 13:03:02.123"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Please enter a valid email address.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:03:02.151" level="INFO">Current page contains text 'Please enter a valid email address.'.</msg>
+<status status="PASS" starttime="20211226 13:03:02.123" endtime="20211226 13:03:02.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_txtEmail"]</arg>
+<arg>testatgmailcom</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:02.151" level="INFO">Typing text 'testatgmailcom' into text field '//*[@id="ContentPlaceHolder1_txtEmail"]'.</msg>
+<status status="PASS" starttime="20211226 13:03:02.151" endtime="20211226 13:03:02.334"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Please enter a valid email address.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:03:02.358" level="INFO">Current page contains text 'Please enter a valid email address.'.</msg>
+<status status="PASS" starttime="20211226 13:03:02.334" endtime="20211226 13:03:02.358"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_txtEmail"]</arg>
+<arg>@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:02.358" level="INFO">Typing text '@gmail.com' into text field '//*[@id="ContentPlaceHolder1_txtEmail"]'.</msg>
+<status status="PASS" starttime="20211226 13:03:02.358" endtime="20211226 13:03:02.514"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Please enter a valid email address.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:03:02.538" level="INFO">Current page contains text 'Please enter a valid email address.'.</msg>
+<status status="PASS" starttime="20211226 13:03:02.514" endtime="20211226 13:03:02.538"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:01.826" endtime="20211226 13:03:02.538"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:03:02.538" endtime="20211226 13:03:04.910"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:02.538" endtime="20211226 13:03:04.910"/>
+</kw>
+<doc>This test case verifies the email field</doc>
+<status status="PASS" starttime="20211226 13:02:52.254" endtime="20211226 13:03:04.910"/>
+</test>
+<test id="s1-t5" name="Check the username for less value than minimum">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:03:04.910" endtime="20211226 13:03:04.910"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:03:04.910" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:03:04.910" endtime="20211226 13:03:10.105"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:03:10.105" endtime="20211226 13:03:10.362"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:10.368" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:03:10.362" endtime="20211226 13:03:10.490"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:03:10.490" endtime="20211226 13:03:10.807"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:04.910" endtime="20211226 13:03:10.807"/>
+</kw>
+<kw name="Enter a username with less than 5 characters" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtUserName</arg>
+<arg>labs</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:10.807" level="INFO">Typing text 'labs' into text field 'id:ContentPlaceHolder1_txtUserName'.</msg>
+<status status="PASS" starttime="20211226 13:03:10.807" endtime="20211226 13:03:11.056"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Username is invalid.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:03:11.096" level="INFO">Current page contains text 'Username is invalid.'.</msg>
+<status status="PASS" starttime="20211226 13:03:11.056" endtime="20211226 13:03:11.096"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:10.807" endtime="20211226 13:03:11.096"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:03:11.096" endtime="20211226 13:03:13.423"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:11.096" endtime="20211226 13:03:13.423"/>
+</kw>
+<doc>This test case verifies the usrname field</doc>
+<status status="PASS" starttime="20211226 13:03:04.910" endtime="20211226 13:03:13.423"/>
+</test>
+<test id="s1-t6" name="Testing whether the password and confirm password are same or not">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:03:13.423" endtime="20211226 13:03:13.423"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:03:13.423" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:03:13.423" endtime="20211226 13:03:18.613"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:03:18.613" endtime="20211226 13:03:18.749"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:18.749" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:03:18.749" endtime="20211226 13:03:18.876"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:03:18.876" endtime="20211226 13:03:19.194"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:13.423" endtime="20211226 13:03:19.194"/>
+</kw>
+<kw name="Enter a password" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:19.194" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword'.</msg>
+<status status="PASS" starttime="20211226 13:03:19.194" endtime="20211226 13:03:19.495"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword2</arg>
+<arg>tracelabs!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:19.503" level="INFO">Typing text 'tracelabs!' into text field 'id:ContentPlaceHolder1_txtPassword2'.</msg>
+<status status="PASS" starttime="20211226 13:03:19.503" endtime="20211226 13:03:19.782"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Password does not match, please check again.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:03:19.822" level="INFO">Current page contains text 'Password does not match, please check again.'.</msg>
+<status status="PASS" starttime="20211226 13:03:19.782" endtime="20211226 13:03:19.822"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:19.194" endtime="20211226 13:03:19.822"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:03:19.822" endtime="20211226 13:03:22.168"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:19.822" endtime="20211226 13:03:22.168"/>
+</kw>
+<doc>This test case verifies the password fields</doc>
+<status status="PASS" starttime="20211226 13:03:13.423" endtime="20211226 13:03:22.168"/>
+</test>
+<test id="s1-t7" name="Check the username field with username which already in use">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211226 13:03:22.168" endtime="20211226 13:03:22.168"/>
+</kw>
+<kw name="Start TestCase" library="CommonFunctionallity">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://etherscan.io/register</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211226 13:03:22.168" level="INFO">Opening browser 'chrome' to base url 'https://etherscan.io/register'.</msg>
+<status status="PASS" starttime="20211226 13:03:22.168" endtime="20211226 13:03:28.248"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211226 13:03:28.248" endtime="20211226 13:03:28.394"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btnCookie</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:28.394" level="INFO">Clicking element 'id:btnCookie'.</msg>
+<status status="PASS" starttime="20211226 13:03:28.394" endtime="20211226 13:03:28.675"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211226 13:03:28.675" endtime="20211226 13:03:29.002"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:22.168" endtime="20211226 13:03:29.002"/>
+</kw>
+<kw name="Valid values in the required fields" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtUserName</arg>
+<arg>george196</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:29.002" level="INFO">Typing text 'george196' into text field 'id:ContentPlaceHolder1_txtUserName'.</msg>
+<status status="PASS" starttime="20211226 13:03:29.002" endtime="20211226 13:03:29.286"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_txtEmail"]</arg>
+<arg>georgebit1@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:29.286" level="INFO">Typing text 'georgebit1@yopmail.com' into text field '//*[@id="ContentPlaceHolder1_txtEmail"]'.</msg>
+<status status="PASS" starttime="20211226 13:03:29.286" endtime="20211226 13:03:29.591"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:29.591" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword'.</msg>
+<status status="PASS" starttime="20211226 13:03:29.591" endtime="20211226 13:03:29.889"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_txtPassword2</arg>
+<arg>tracelabs!@#</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:29.889" level="INFO">Typing text 'tracelabs!@#' into text field 'id:ContentPlaceHolder1_txtPassword2'.</msg>
+<status status="PASS" starttime="20211226 13:03:29.889" endtime="20211226 13:03:30.187"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="ContentPlaceHolder1_maindiv"]/div[4]/div/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:30.187" level="INFO">Clicking element '//*[@id="ContentPlaceHolder1_maindiv"]/div[4]/div/label/span'.</msg>
+<status status="PASS" starttime="20211226 13:03:30.187" endtime="20211226 13:03:30.323"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211226 13:03:45.331" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20211226 13:03:30.323" endtime="20211226 13:03:45.331"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:29.002" endtime="20211226 13:03:45.331"/>
+</kw>
+<kw name="Click on *Create an account*" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:ContentPlaceHolder1_btnRegister</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211226 13:03:45.331" level="INFO">Clicking element 'id:ContentPlaceHolder1_btnRegister'.</msg>
+<status status="PASS" starttime="20211226 13:03:45.331" endtime="20211226 13:03:48.447"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:45.331" endtime="20211226 13:03:48.455"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sorry! The username you entered is already in use.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211226 13:03:48.503" level="INFO">Current page contains text 'Sorry! The username you entered is already in use.'.</msg>
+<status status="PASS" starttime="20211226 13:03:48.455" endtime="20211226 13:03:48.503"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionallity">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211226 13:03:48.503" endtime="20211226 13:03:50.846"/>
+</kw>
+<status status="PASS" starttime="20211226 13:03:48.503" endtime="20211226 13:03:50.846"/>
+</kw>
+<doc>This test case verifies the username field</doc>
+<status status="PASS" starttime="20211226 13:03:22.168" endtime="20211226 13:03:50.846"/>
+</test>
+<status status="PASS" starttime="20211226 13:01:48.293" endtime="20211226 13:03:50.846"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="RegisteranewAccount">RegisteranewAccount</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
